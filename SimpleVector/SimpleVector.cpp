@@ -2,6 +2,7 @@
 using namespace std;
 
 template <typename T>
+
 class SimpleVector {
 private:
     T* data;              // 동적 배열
@@ -65,15 +66,23 @@ int main() {
     SimpleVector<int> v(10); // 크기가 10인 벡터 생성
     cout << "Initial size: " << v.size() << endl; // 현재 크기 출력
 
-    v.push_back(10); // 원소 추가
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);// 원소 추가
 
     cout << "Size after push_back: " << v.size() << endl; // 추가 후 크기 출력
 
     v.pop_back(); // 마지막 원소 제거
     cout << "Size after pop_back: " << v.size() << endl; // 제거 후 크기 출력
 
+    
+
+    cout << "all data : " ;
+
     for (int i = 0; i < v.size(); i++) {
-        cout << v[i] << " "; // 모든 원소 출력
+		
+		cout << v[i] << " "; // 모든 원소 출력
+        
     }
     cout << endl;
 
